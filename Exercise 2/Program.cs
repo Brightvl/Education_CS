@@ -5,25 +5,35 @@
 44 5 78 -> 78
 22 3 9 -> 22*/
 
-Console.WriteLine("Введите первое число");
-int num1 = Convert.ToInt32(Console.ReadLine());
+Console.Clear();
 
-Console.WriteLine("Введите второе число");
-int num2 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("введи первое любое число:");
+int Num1 = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("Введите третье число");
-int num3 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("введи второе любое число:");
+int Num2 = Convert.ToInt32(Console.ReadLine());
 
-if (num1 < num2)
+Console.WriteLine("введи третье любое число:");
+int Num3 = Convert.ToInt32(Console.ReadLine());
+
+if (Num1 > Num2)
 {
-    Console.WriteLine($"Максимальное значение = {num2} ");
+    if (Num1 > Num3)
+    {
+        Console.WriteLine($"Максимальное значение = {Num1} ");
+    }
+
+    else
+    {
+        Console.WriteLine($"Максимальное значение = {Num2} ");
+    }
 }
-if (num2 < num3)
+else if (Num2 > Num3)
 {
-    Console.WriteLine($"Максимальное значение = {num3} ");
-}
-if (num3 < num1)
-{
-    Console.WriteLine($"Максимальное значение = {num1} ");
+    Console.WriteLine($"Максимальное значение = {Num2} ");
 }
 
+else
+{
+    Console.WriteLine($"Максимальное значение = {Num3} ");
+}
