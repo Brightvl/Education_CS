@@ -8,13 +8,13 @@
 
 Console.Clear();
 
-Console.WriteLine("введи первое любое число:");
+Console.WriteLine("введи первое число:");
 int Num1 = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("введи второе любое число:");
+Console.WriteLine("введи второе число:");
 int Num2 = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("введи третье любое число:");
+Console.WriteLine("введи третье число:");
 int Num3 = Convert.ToInt32(Console.ReadLine());
 
 if (Num1 > Num2)

@@ -10,24 +10,27 @@
 
 Console.Clear();
 
-Console.WriteLine("Введи числа ");
-int n = Convert.ToInt32(Console.ReadLine());
-int[] nums = new int[n];
+Console.WriteLine("введи первое число:");
+int Num1 = Convert.ToInt32(Console.ReadLine());
 
-Console.Write(nums);
+Console.WriteLine("введи второе число:");
+int Num2 = Convert.ToInt32(Console.ReadLine());
 
+Console.WriteLine("введи третье число:");
+int Num3 = Convert.ToInt32(Console.ReadLine());
 
-for (int i = 1; i < n; i++)
+if (Num1 > Num2 && Num1 > Num3)
 {
+    
+    Console.WriteLine($"Максимальное значение = {Num1} ");
 
 }
+else if (Num3 > Num2)
+{
+    Console.WriteLine($"Максимальное значение = {Num3} ");
+}
 
-// while (i < n)
-// {
-    // Console.WriteLine($"Введите {i + 1} число");
-    // int el = nums.Take(el)Convert.ToInt32(Console.ReadLine());
-
-
-    // Console.Write($"{nums[i]}");
-    // i++;
-// } 
+else
+{
+    Console.WriteLine($"Максимальное значение = {Num2} ");
+}
