@@ -6,20 +6,28 @@
 22 3 9 -> 22
 */
 
+// Думал решить с помощью массива но это пока фантазии. Так что не обращайте внимания:)
+
 Console.Clear();
 
-Console.WriteLine("Сколько чисел будет?");
+Console.WriteLine("Введи числа ");
 int n = Convert.ToInt32(Console.ReadLine());
-int i = 0;
 int[] nums = new int[n];
-el = 0;
+
+Console.Write(nums);
 
 
-while (i < n)
+for (int i = 1; i < n; i++)
 {
-    Console.WriteLine($"Введите {i + 1} число");
-    int el = Convert.ToInt32(Console.ReadLine());
 
-    Console.Write($"{nums[i]}");
-    i++;
-} 
+}
+
+// while (i < n)
+// {
+    // Console.WriteLine($"Введите {i + 1} число");
+    // int el = nums.Take(el)Convert.ToInt32(Console.ReadLine());
+
+
+    // Console.Write($"{nums[i]}");
+    // i++;
+// } 
