@@ -3,7 +3,8 @@
 три числа и выдает максимальное из этих чисел.
 2, 3, 7 -> 7
 44 5 78 -> 78
-22 3 9 -> 22*/
+22 3 9 -> 22
+*/
 
 Console.Clear();
 
@@ -23,17 +24,13 @@ if (Num1 > Num2)
         Console.WriteLine($"Максимальное значение = {Num1} ");
     }
 
-    else
-    {
-        Console.WriteLine($"Максимальное значение = {Num2} ");
-    }
 }
-else if (Num2 > Num3)
+else if (Num3 > Num2)
 {
-    Console.WriteLine($"Максимальное значение = {Num2} ");
+    Console.WriteLine($"Максимальное значение = {Num3} ");
 }
 
 else
 {
-    Console.WriteLine($"Максимальное значение = {Num3} ");
+    Console.WriteLine($"Максимальное значение = {Num2} ");
 }
