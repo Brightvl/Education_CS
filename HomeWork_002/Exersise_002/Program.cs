@@ -20,7 +20,7 @@ double pow2 = Math.Pow(10, (reng - 3));
 
 if (num / 100 != 0)
 {
-    int num_2 = Convert.ToInt32((num % pow) - (num % pow2));
+    int num_2 = Convert.ToInt32((num % pow) / (10 * pow2));
     Console.WriteLine(num_2);
 }
 
