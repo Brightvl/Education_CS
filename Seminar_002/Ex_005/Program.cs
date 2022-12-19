@@ -12,11 +12,11 @@ Console.Write("2 число = ");
 int num2 = Convert.ToInt32(Console.ReadLine());
 
 
-if (num1 == num2*num2)
+if (num1 == num2 * num2)
 {
     Console.WriteLine($"Число {num1} является квадратом {num2}");
 }
-else if (num2 == num1*num1)
+else if (num2 == num1 * num1)
 {
     Console.WriteLine($"Число {num2} является квадратом {num2}");
 }
