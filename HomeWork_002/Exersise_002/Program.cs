@@ -24,4 +24,17 @@ else
     }
     Console.WriteLine($"Третья цифра в числе = {num % 10}");
 }
-//до тех пор пока число больit 1000 дели на 10
+//до тех пор пока число больше 1000 дели на 10!
+
+// Через длину
+// Console.Write("Введи число: ");
+// int anyNumber = Convert.ToInt32(Console.ReadLine());
+// string anyNumberText = Convert.ToString(anyNumber);
+// if (anyNumberText.Length > 2)
+// {
+//   Console.WriteLine("третья цифра -> " + anyNumberText[2]);
+// }
+// else 
+// {
+//   Console.WriteLine("-> третьей цифры нет");
+// }
