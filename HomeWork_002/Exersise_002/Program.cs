@@ -11,7 +11,7 @@
 
 Console.Clear();
 Console.WriteLine("Ввеите число");
-int num = int.Parse(Console.ReadLine());
+int num = int.Parse(Console.ReadLine()?? "Вы ввели что то другое");
 if (num < 100)
 {
     Console.WriteLine("Вы не ввели 3-х значное число");
