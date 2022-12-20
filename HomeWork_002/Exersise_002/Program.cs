@@ -10,32 +10,18 @@
 
 
 Console.Clear();
-
-Console.WriteLine("Введите число");
-int num = Convert.ToInt32(Console.ReadLine());
-string rin = Convert.ToString(num);
-int reng = Convert.ToInt32(rin.Length);
-double pow = Math.Pow(10, (reng - 2));
-double pow2 = Math.Pow(10, (reng - 3));
-
-if (num / 100 != 0)
+Console.WriteLine("Ввеите число");
+int num = int.Parse(Console.ReadLine());
+if (num < 100)
 {
-    int num_2 = Convert.ToInt32((num % pow) - (num % pow2));
-    Console.WriteLine(num_2);
+    Console.WriteLine("Вы не ввели 3-х значное число");
 }
-
 else
 {
-    Console.WriteLine("Хуйня");
+    while (num > 1000)
+    {
+        num = num / 10;
+    }
+    Console.WriteLine($"Третья цифра в числе = {num % 10}");
 }
-
-
-// if (num > 99)
-// {
-//     int num_2 = (num % (num2*));
-//     Console.WriteLine(num_2);
-// }
-// else
-// {
-//     Console.WriteLine("Вы не ввели третью цифру ало");
-// }
+//до тех пор пока число больit 1000 дели на 10
