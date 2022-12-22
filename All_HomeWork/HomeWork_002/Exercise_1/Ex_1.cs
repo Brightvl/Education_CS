@@ -7,6 +7,11 @@
 918 -> 1
 */
 
+// Console.Clear();
+// int num = Random().Next(100, 1000);
+// int secondNumber = num/ 10%10;
+// Console.WriteLine($"Вторая цифра в числе {num} -> {secondNumber}");
+
 Console.Clear();
 
 Console.WriteLine("Введите трехзначное число");
@@ -21,4 +26,6 @@ else
 {
     Console.WriteLine("Вы ввеели не трехзначное значное число ало");
 }
+
+
 
