@@ -10,7 +10,7 @@ Console.Clear();
 string[] week = { "понеельник", "вторник", "среда", "четверг", "пятница", "суббота", "восресение" };
 
 Console.WriteLine("Введите номер дня недели");
-int num = int.Parse(Console.ReadLine()?? "Введите число");
+int num = int.Parse(Console.ReadLine()?? "wares");
 
 if (num < 1 || num > 7)
 {
