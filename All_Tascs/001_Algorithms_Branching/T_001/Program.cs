@@ -6,8 +6,8 @@ Random rnd = new Random();
 int rand = rnd.Next(19, 100);
 int num = int.Parse(Console.ReadLine());
 
-string del1 = (rand / num > 0) ? "Делится" : "нет";
+string del = (rand / num > 0) ? "Делится" : "нет";
 
 Console.WriteLine(rand);
-Console.WriteLine(del1);
+Console.WriteLine(del);
 Console.WriteLine(num);
