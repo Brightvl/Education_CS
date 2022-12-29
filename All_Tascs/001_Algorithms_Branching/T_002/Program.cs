@@ -4,21 +4,12 @@ eсли a == b, выводится сообщение “числа равны�
 
 Console.Clear();
 
-
 int a = new Random().Next(10, 31);
 int b = new Random().Next(10, 31);
 
-if (a > b)
-{
-    Console.WriteLine(a - b);
-}
-else if (a < b)
-{
-    Console.WriteLine(b + a);
-}
-else
-{
-    Console.WriteLine("Числа равны");
-}
+if (a > b) {Console.WriteLine(a - b);}
+else if (a < b) {Console.WriteLine(b + a);}
+else {Console.WriteLine("Числа равны");}
+
 Console.WriteLine(a);
 Console.WriteLine(b);

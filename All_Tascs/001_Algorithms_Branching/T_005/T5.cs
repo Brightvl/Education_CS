@@ -11,14 +11,7 @@ int height = int.Parse(Console.ReadLine());
 int normal_weight = height - 100;
 
 if (weight > normal_weight + (weight * 10)/100)
-{
-    Console.WriteLine("Your weight is too high");
-}
+{Console.WriteLine("Your weight is too high");}
 else if (weight < normal_weight - (weight * 10)/100)
-{
-    Console.WriteLine("Your weight is too low");
-}
-else
-{
-    Console.WriteLine("Your weight is good");
-}
+{Console.WriteLine("Your weight is too low");}
+else {Console.WriteLine("Your weight is good");}
