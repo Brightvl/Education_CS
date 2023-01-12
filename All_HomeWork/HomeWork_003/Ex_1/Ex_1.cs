@@ -9,7 +9,7 @@
 
 Console.Clear();
 
-Console.Write("Введите любое число или слово");
+Console.Write("Для проверки палиндрома, введите любое число или слово");
 string num = Console.ReadLine();
 int numTxt = num.Length;
 
