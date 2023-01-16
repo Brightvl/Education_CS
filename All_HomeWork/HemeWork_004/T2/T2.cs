@@ -10,9 +10,23 @@ Console.WriteLine("Введите число");
 string num = Console.ReadLine();
 int sum = 0;
 
-for (int i = 0; i < num.Length; i++)
+int GetSumNums(int number)
 {
-    sum = sum + Convert.ToInt32(Convert.ToString(num[i]));
-    Console.WriteLine(sum);
-    Console.ReadKey();
+    for (int i = 0; i < num.Length; i++)
+    {
+        sum = sum + Convert.ToInt32(Convert.ToString(num[i]));
+        Console.WriteLine(sum);
+        Console.ReadKey();
+    }
+}
+
+int GetSumNums1(int number)
+{
+    int sum = 0;
+    while(number > 0)
+    {
+        sum += number % 10;
+        number /= 10;
+    }
+    return sum;
 }
