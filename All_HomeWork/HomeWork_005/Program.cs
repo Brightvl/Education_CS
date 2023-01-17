@@ -125,13 +125,13 @@ Console.Write($"Массив ");
 ShowArrayInt(arrayInt);                                         //Отображение массива
 
 Console.WriteLine($"Колличество " +
-$"четных чисел в массиве = {NumEvenInArray(arrayInt)}");        
+$"четных чисел в массиве = {NumEvenInArray(arrayInt)}");        //Задача №34
 
 Console.WriteLine($"Сумма чисел массива " +
-$"на нечетных позициях = {SumOddPositionInArray(arrayInt)}");   //Задача №34
+$"на нечетных позициях = {SumOddPositionInArray(arrayInt)}");   //Задача №36
 
 Console.WriteLine($"Cумма "+
-$"нечетных чисел массива = {SumOddInArray(arrayInt)}\n");       //Задача №36
+$"нечетных чисел массива = {SumOddInArray(arrayInt)}\n");       //Выдуманная мной задача
 
 Console.Write($"Вещественный массив ");                         //Задача №38
 double[] arrayDouble = CreateRandomArrayDouble(6, 100, 1000);   //Создание массива
