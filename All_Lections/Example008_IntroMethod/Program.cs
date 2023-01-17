@@ -27,6 +27,6 @@ int c3 = 33;
 // int max = Max(max1, max2, max3);4545
 
 
-Console.WriteLine(max);
+Console.WriteLine(Max);
 
 
