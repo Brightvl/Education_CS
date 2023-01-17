@@ -63,6 +63,13 @@ int SumOddInArray(int[] array)
     return result;
 }
 
+//Функция суммирования чисел стоящих на нечетных позициях
+int SumOddPositionInArray(int[] array)
+{
+    int result = 0;
+    for (int i = 1; i < array.Length; i+=2) {result += array[i];}
+    return result;
+}
 
 /* Задача 38: Задайте массив вещественных чисел. Найдите разницу 
 между максимальным и минимальным элементом массива.
@@ -118,7 +125,10 @@ Console.Write($"Массив ");
 ShowArrayInt(arrayInt);                                         //Отображение массива
 
 Console.WriteLine($"Колличество " +
-$"четных чисел в массиве = {NumEvenInArray(arrayInt)}");        //Задача №34
+$"четных чисел в массиве = {NumEvenInArray(arrayInt)}");        
+
+Console.WriteLine($"Сумма чисел массива " +
+$"на нечетных позициях = {SumOddPositionInArray(arrayInt)}");   //Задача №34
 
 Console.WriteLine($"Cумма "+
 $"нечетных чисел массива = {SumOddInArray(arrayInt)}\n");       //Задача №36
