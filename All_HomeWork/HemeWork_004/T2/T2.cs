@@ -10,7 +10,7 @@ Console.WriteLine("Введите число");
 string num = Console.ReadLine();
 int sum = 0;
 
-int GetSumNums(int number)
+void GetSumNums(int number)
 {
     for (int i = 0; i < num.Length; i++)
     {

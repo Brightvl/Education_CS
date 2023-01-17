@@ -36,7 +36,7 @@ int negative = 0;
 for (int i = 0; i < Array1.Length; i++)
 {
     if (Array1[i] > 0)positive += Array1[i];
-    elsenegative += Array1[i];
+    else negative += Array1[i];
 }
 
 Console.WriteLine($"Сумма позитивных = {positive}\n+Сумма негативных = {negative}");
