@@ -6,7 +6,6 @@ a = -3 b = 9 -> нет)*/
 
 Console.Clear();
 
-
 Console.WriteLine("Введите первое число");
 double num1 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите второе число");
@@ -22,8 +21,8 @@ else Console.WriteLine($"{num1} не является квадратом чис�
 string[] arr = { "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье" };
 
 Console.Write("Введите номер от 1 до 7 - ");
-int nameWeek = Convert.ToInt32(Console.ReadLine());
-Console.Write(arr[nameWeek - 1]);
+int numWeek = Convert.ToInt32(Console.ReadLine());
+Console.Write(arr[numWeek - 1]);
 
 /*Задача №5. Напишите программу, которая на вход принимает одно число (N), 
 а на выходе показывает все целые числа в промежутке от -N до N.
@@ -51,6 +50,6 @@ while (i <= num)
 */
 
 Console.Write("Введите трёхзначное число: ");
-int num = Convert.ToInt32(Console.ReadLine());
-int result = (num % 10);
+int numThree = Convert.ToInt32(Console.ReadLine());
+int result = (numThree % 10);
 Console.Write(result);
