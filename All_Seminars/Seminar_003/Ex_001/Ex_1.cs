@@ -3,60 +3,28 @@
 причем X ≠ 0 и Y ≠ 0 и выдаёт номер 
 четверти плоскости, в которой находится эта точка. */
 
-
 //Решение через функции
 Console.Clear();
 
 //Это процедура!
 void PrintCord(int x, int y)
 {
-    if (x > 0 && y > 0)
-    {
-        Console.WriteLine("1 четверть");
-    }
-    else if (x < 0 && y > 0)
-    {
-        Console.WriteLine("2 четверть");
-    }
-    else if (x < 0 && y < 0)
-    {
-        Console.WriteLine("3 четверть");
-    }
-    else if (x > 0 && y < 0)
-    {
-        Console.WriteLine("4 четверть");
-    }
-    else
-    {
-        Console.WriteLine("Точка в центре");
-    }
+    if (x > 0 && y > 0) Console.WriteLine("1 четверть");
+    else if (x < 0 && y > 0) Console.WriteLine("2 четверть");
+    else if (x < 0 && y < 0) Console.WriteLine("3 четверть");
+    else if (x > 0 && y < 0) Console.WriteLine("4 четверть");
+    else Console.WriteLine("Точка в центре");
 }
 
-//Это функция! в данном случае выведел число обозначающее четветь
+//Это функция! в данном случае вывел число обозначающее четверть
 int PrintCord1(int x, int y)
 {
-    if (x > 0 && y > 0)
-    {
-        return 1;
-    }
-    else if (x < 0 && y > 0)
-    {
-        return 2;
-    }
-    else if (x < 0 && y < 0)
-    {
-        return 3;
-    }
-    else if (x > 0 && y < 0)
-    {
-        return 4;
-    }
-    else
-    {
-        return 0;
-    }
+    if (x > 0 && y > 0) return 1;
+    else if (x < 0 && y > 0) return 2;
+    else if (x < 0 && y < 0) return 3;
+    else if (x > 0 && y < 0) return 4;
+    else return 0;
 }
-
 
 Console.WriteLine("Координата X");
 int Cord_x = int.Parse(Console.ReadLine());
@@ -66,7 +34,6 @@ int Cord_y = int.Parse(Console.ReadLine());
 PrintCord(Cord_x, Cord_y);
 PrintCord(5, 6);
 PrintCord(-4, -4);
-
 
 
 //Альтернативное решение

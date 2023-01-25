@@ -5,24 +5,24 @@
     3. массив
 */
 
-// /* 
-// Задача 28: Напишите программу, которая принимает на вход 
-// число N и выдаёт произведение чисел от 1 до N.
-// 4 -> 24 
-// 5 -> 120
-// */
+/* 
+Задача 28: Напишите программу, которая принимает на вход 
+число N и выдаёт произведение чисел от 1 до N.
+4 -> 24 
+5 -> 120
+*/
 
-// Console.Write("Введите число ");
-// int num = int.Parse(Console.ReadLine());
+Console.Write("Введите число ");
+int num = int.Parse(Console.ReadLine());
 
-// void Mult (int N)
-// {
-//     int sum = 1;
-//     for (int i = 1; i <= Math.Abs(N); i++) sum*= i;
-//     Console.Write($"Произведение чисел равно {sum}");
-// }
+void Mult (int N)
+{
+    int sum = 1;
+    for (int i = 1; i <= Math.Abs(N); i++) sum*= i;
+    Console.Write($"Произведение чисел равно {sum}");
+}
 
-// Mult(num);
+Mult(num);
 
 /* 
 Задача 26: Напишите программу, которая принимает на вход число 
@@ -32,21 +32,21 @@
 89126 -> 5
  */
 
-// Console.Write("Введите число ");
-// int num = int.Parse(Console.ReadLine());
+Console.Write("Введите число ");
+int num = int.Parse(Console.ReadLine());
 
-// void NumNum(int num)
-// {
-//     int chase = 0;
-//     while (num != 0)
-//     {
-//         num = num / 10;
-//         chase += 1;
-//     }
-//     Console.Write($"Колличество символов в числе {chase}");
-// }
+void NumNum(int num)
+{
+    int chase = 0;
+    while (num != 0)
+    {
+        num = num / 10;
+        chase += 1;
+    }
+    Console.Write($"Колличество символов в числе {chase}");
+}
 
-// NumNum(num);
+NumNum(num);
 
 
 

@@ -19,33 +19,33 @@ double[,] CreateNewRandomArray(int m, int n, int minValue, int maxValue)
     return result;
 }
 //Выводит на экран массив типа double
-void PrintArray(double[,] array)
+void PrintArray<T>(T[,] array) //T - Джинерик
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
             //интерполяция - :E3, знаки после запятой
-            Console.Write($"{array[i, j]:N3}  ");
+            Console.Write($"{array[i, j]:N1}  ");
         }
         Console.WriteLine();
     }
 
 }
-//Выводит на экран массив типа int
-void PrintArrayInt(int[,] array)
-{
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            //интерполяция - :E3, знаки после запятой
-            Console.Write($"{array[i, j]}  ");
-        }
-        Console.WriteLine();
-    }
+// //Выводит на экран массив типа int
+// void PrintArrayInt(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             //интерполяция - :E3, знаки после запятой
+//             Console.Write($"{array[i, j]}  ");
+//         }
+//         Console.WriteLine();
+//     }
 
-}
+// }
 
 /* Задача 50: Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, 
 и возвращает значение этого элемента или же указание, что такого элемента нет.
@@ -113,6 +113,6 @@ Console.WriteLine("\nПоиск элемента по индексу:");
 FindElementInArray(randomArray);                                //Задача №50
 Console.WriteLine("\nОпределение среднего арифметического столбцов int массива:");
 int[,] randomArrayInt = CreateNewRandomArrayInt(5, 5, 1, 10);
-PrintArrayInt(randomArrayInt);
+PrintArray(randomArrayInt);
 Console.WriteLine();
 AverageColoumnArray(randomArrayInt);                            //Задача №52

@@ -13,7 +13,6 @@
 // Console.WriteLine($"Вторая цифра в числе {num} -> {secondNumber}");
 
 Console.Clear();
-
 Console.WriteLine("Введите трехзначное число");
 int num = Convert.ToInt32(Console.ReadLine());
 
@@ -22,10 +21,7 @@ if (num < 1000 && num > 99)
     int num_2 = ((num % 100) / 10);
     Console.WriteLine(num_2);
 }
-else
-{
-    Console.WriteLine("Вы ввеели не трехзначное значное число ало");
-}
+else Console.WriteLine("Вы ввеели не трехзначное значное число ало");
 
 
 

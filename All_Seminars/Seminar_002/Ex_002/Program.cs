@@ -7,10 +7,7 @@
 // 782 -> 72
 // 918 -> 98
 
-
-
 int number = new Random().Next(100, 1000);
-
 Console.WriteLine (number);
 
 int num1 = number/100;
