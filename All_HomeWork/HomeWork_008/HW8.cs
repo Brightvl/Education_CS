@@ -126,14 +126,11 @@ ArrayStringReduction(array);                        //54
 PrintArray(array);
 Console.WriteLine();
 
-MinSummStringInArray(array);
-Console.WriteLine();
-PrintArray(array);
+MinSummStringInArray(array);                           //56
 Console.WriteLine();
 
-
-
-
+PrintArray(array);              
+Console.WriteLine();
 
 int[,,] arrayThird = GetThirdArray(4, 4, 4, 10, 100); //60
 PrintArray1(arrayThird);
