@@ -12,17 +12,17 @@
 5 -> 120
 */
 
-Console.Write("Введите число ");
-int num = int.Parse(Console.ReadLine());
+// Console.Write("Введите число ");
+// int num = int.Parse(Console.ReadLine());
 
-void Mult (int N)
-{
-    int sum = 1;
-    for (int i = 1; i <= Math.Abs(N); i++) sum*= i;
-    Console.Write($"Произведение чисел равно {sum}");
-}
+// void Mult (int N)
+// {
+//     int sum = 1;
+//     for (int i = 1; i <= Math.Abs(N); i++) sum*= i;
+//     Console.Write($"Произведение чисел равно {sum}");
+// }
 
-Mult(num);
+// Mult(num);
 
 /* 
 Задача 26: Напишите программу, которая принимает на вход число 

@@ -1,8 +1,8 @@
-﻿/* 54 Задайте двумерный массив. Напишите программу, 
+﻿/* 54. Задайте двумерный массив. Напишите программу, 
 которая упорядочит по убыванию элементы каждой 
 строки двумерного массива. */
 
-void PrintArray(int[,] inArray)
+void PrintArray(int[,] inArray) //Отображение массива
 {
     for (int i = 0; i < inArray.GetLength(0); i++)
     {
@@ -14,7 +14,7 @@ void PrintArray(int[,] inArray)
     }
 }
 
-int[,] GetArray(int m, int n, int minValue, int maxValue)
+int[,] GetArray(int m, int n, int minValue, int maxValue) //Создание массива
 {
     int[,] result = new int[m, n];
     for (int i = 0; i < m; i++)
@@ -27,7 +27,7 @@ int[,] GetArray(int m, int n, int minValue, int maxValue)
     return result;
 }
 
-int[,] ArrayStringReduction(int[,] array)
+int[,] ArrayStringReduction(int[,] array) //Элементы в строке по порядку
 {
 
     for (int row = 0; row < array.GetLength(0); row++)
@@ -48,11 +48,11 @@ int[,] ArrayStringReduction(int[,] array)
     return array;
 }
 
-/* 56 Задайте прямоугольный двумерный массив. Напишите программу, 
+/* 56. Задайте прямоугольный двумерный массив. Напишите программу, 
 которая будет находить строку с наименьшей суммой элементов.
  */
 
-void MinSummStringInArray(int[,] array)
+void MinSummStringInArray(int[,] array) //Отображение строки с мин суммой
 {
     int min = 0;
     int sum = 0;
@@ -63,17 +63,50 @@ void MinSummStringInArray(int[,] array)
         {
             sum += array[row, coll];
         }
-        Console.WriteLine(sum);
-        if (min < sum)
+        Console.Write($"{sum} ");
+        if (min == 0) min = sum;
+        else if (min > sum)
         {
             min = sum;
-            num = row+1;
+            num = row + 1;
         }
         sum = 0;
     }
-    Console.WriteLine(num);
-}//Сделать перебор и в переменную записать наименьшее
+    Console.WriteLine($"Наименьшая сумма в {num}-й строке");
+}
 
+/* 58. Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.*/
+
+int[,] MatrixMultiply(int[,] matrixA, int[,] matrixB) //Умножение матриц
+{
+    //Колличество столбцов первой матрицы должно быть равно колличеству строк 2 матрицы
+    //Должна умножаться строка на столбец
+    int rowsA = matrixA.GetLength(0);
+    int colsA = matrixA.GetLength(1);
+    int rowsB = matrixB.GetLength(0);
+    int colsB = matrixB.GetLength(1);
+
+    if (colsA != rowsB)
+    {
+        throw new Exception("Ошибка, столбец матрицы А не совпадает со строкой матрицы B");
+        //Для того чтобы в консоль выдалась информация о не совпадении
+    }
+
+    int[,] result = new int[rowsA, colsB]; //Результирующая матрица
+
+    for (int i = 0; i < rowsA; i++) //строка 1 матрицы
+    {
+        for (int j = 0; j < colsB; j++) //столбец второй
+        {
+            for (int k = 0; k < colsA; k++) //строка первой 
+            {
+                result[i, j] += matrixA[i, k] * matrixB[k, j];
+            }
+        }
+    }
+
+    return result;
+}
 
 
 /* 60 Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. 
@@ -85,7 +118,7 @@ void MinSummStringInArray(int[,] array)
 // 27(0,0,1) 90(0,1,1)
 // 26(1,0,1) 55(1,1,1)
 
-int[,,] GetThirdArray(int x, int y, int z, int minValue, int maxValue)
+int[,,] GetThirdArray(int x, int y, int z, int minValue, int maxValue) //создание трехмерного массива
 {
     int[,,] result = new int[x, y, z];
     for (int i = 0; i < result.GetLength(0); i++)
@@ -101,7 +134,7 @@ int[,,] GetThirdArray(int x, int y, int z, int minValue, int maxValue)
     return result;
 }
 
-void PrintArray1(int[,,] inArray)
+void PrintArrayThird(int[,,] inArray) //Отображение трехмерного массива
 {
     for (int i = 0; i < inArray.GetLength(0); i++)
     {
@@ -118,20 +151,57 @@ void PrintArray1(int[,,] inArray)
     }
 }
 
+/* 62. Заполните спирально массив 4 на 4. */
 
-int[,] array = GetArray(5, 4, 1, 9);
+int[,] SpiralArray(int rows, int columns)
+{
+    int[,] returnSpiral = new int[rows, columns];
+    int n = 1;
+
+    while (n > rows * columns)
+    {
+        
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < columns; j++)
+        {
+            returnSpiral[i, j] = n++;
+        }
+        if
+    }
+}
+}
+
+
+
+
+
+Console.Clear();
+//---------------------------------------------------------------------
+Console.WriteLine("-----------------------\nЗадача №54\n");
+int[,] array = GetArray(5, 4, 1, 9);            //Задали массив
+PrintArray(array);                              //Отобразили
+Console.WriteLine();
+ArrayStringReduction(array);
+PrintArray(array);                              //Отобразили разницу
+//---------------------------------------------------------------------
+Console.WriteLine("-----------------------\nЗадача №56\n");
+MinSummStringInArray(array);
+Console.WriteLine();
 PrintArray(array);
+//---------------------------------------------------------------------
+Console.WriteLine("-----------------------\nЗадача №58\n");
+int[,] matrix1 = GetArray(3, 2, 1, 10);         //Задали 2 матрицы
+int[,] matrix2 = GetArray(2, 3, 1, 10);
+PrintArray(matrix1);                            //Отобразили 2 матрицы
 Console.WriteLine();
-ArrayStringReduction(array);                        //54
-PrintArray(array);
+PrintArray(matrix2);
 Console.WriteLine();
-
-MinSummStringInArray(array);                           //56
-Console.WriteLine();
-
-PrintArray(array);              
-Console.WriteLine();
-
-int[,,] arrayThird = GetThirdArray(4, 4, 4, 10, 100); //60
-PrintArray1(arrayThird);
+int[,] matrix = MatrixMultiply(matrix1, matrix2); //Перемножили
+PrintArray(matrix);                             //Отобразили итог
+//---------------------------------------------------------------------
+Console.WriteLine("-----------------------\nЗадача №60\n");
+int[,,] arrayThird = GetThirdArray(4, 4, 4, 10, 100); //Трехмерный массив
+PrintArrayThird(arrayThird);                          //Отображение трехмерного массива
+Console.WriteLine("-----------------------\nЗадача №62\n");
 
