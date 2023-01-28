@@ -56,14 +56,14 @@ void MinSummStringInArray(int[,] array) //Отображение строки с
 {
     int min = 0;
     int sum = 0;
-    int num = 0;
+    int num = 1;
     for (int row = 0; row < array.GetLength(0); row++)
     {
         for (int coll = 0; coll < array.GetLength(1); coll++)
         {
             sum += array[row, coll];
         }
-        Console.Write($"{sum} ");
+        Console.Write($"Сумма {row + 1} строки = {sum};\n");
         if (min == 0) min = sum;
         else if (min > sum)
         {
@@ -153,55 +153,96 @@ void PrintArrayThird(int[,,] inArray) //Отображение трехмерн�
 
 /* 62. Заполните спирально массив 4 на 4. */
 
-int[,] SpiralArray(int rows, int columns)
+int[,] SpiralArray(int rows, int columns, int startNumberSpiral)
 {
     int[,] returnSpiral = new int[rows, columns];
-    int n = 1;
+    int numberOfSpiral = startNumberSpiral;
+    int count = 1; //Счетчик 
+    int minRow = 0; // Индекс первой строки
+    int maxRow = returnSpiral.GetLength(0) - 1; // Индекс последней строки
+    int minColumn = 0;// Индекс первого столба
+    int maxColumn = returnSpiral.GetLength(1) - 1;// Индекс последнего столба
+    //-1 чтобы не выходить за пределы массива, отсчет же с 0.
 
-    while (n > rows * columns)
+    //Цикл, пока счетчик не будет равен длине массива
+    while (
+        count <= returnSpiral.Length)
     {
-        
-    for (int i = 0; i < rows; i++)
-    {
-        for (int j = 0; j < columns; j++)
+        //верхняя строка
+        for (int i = minColumn; i <= maxColumn; i++)
         {
-            returnSpiral[i, j] = n++;
+            returnSpiral[minRow, i] = numberOfSpiral++;
+            count++;
         }
-        if
+        minRow++;
+        /* плюсуем потому что когда пойдем в обратном напрлении 
+        minRow по сути станет maxRow то есть числом до которого пойдет отсчет
+ */
+        //Правый столбец
+        for (int i = minRow; i <= maxRow; i++)
+        {
+            returnSpiral[i, maxColumn] = numberOfSpiral++;
+            count++;
+        }
+        maxColumn--;
+        //Нижняя строка
+        for (int i = maxColumn; i >= minColumn; i--)
+        {
+            returnSpiral[maxRow, i] = numberOfSpiral++;
+            count++;
+        }
+        maxRow--;
+        //Левый столбик
+        for (int i = maxRow; i >= minRow; i--)
+        {
+            returnSpiral[i, minColumn] = numberOfSpiral++;
+            count++;
+        }
+        minColumn++;
+
     }
-}
-}
+    return returnSpiral;
 
-
+}
 
 
 
 Console.Clear();
+
 //---------------------------------------------------------------------
-Console.WriteLine("-----------------------\nЗадача №54\n");
+Console.WriteLine("\n-----------------------");
+Console.WriteLine("HW №8 26.01.23");
+Console.WriteLine("-----------------------\nЗадача №54\n\nПодопытный массив");
 int[,] array = GetArray(5, 4, 1, 9);            //Задали массив
 PrintArray(array);                              //Отобразили
-Console.WriteLine();
+Console.WriteLine("\nОт наибольшего к наименьшему в строке");
 ArrayStringReduction(array);
 PrintArray(array);                              //Отобразили разницу
 //---------------------------------------------------------------------
 Console.WriteLine("-----------------------\nЗадача №56\n");
 MinSummStringInArray(array);
 Console.WriteLine();
-PrintArray(array);
+
 //---------------------------------------------------------------------
 Console.WriteLine("-----------------------\nЗадача №58\n");
 int[,] matrix1 = GetArray(3, 2, 1, 10);         //Задали 2 матрицы
-int[,] matrix2 = GetArray(2, 3, 1, 10);
-PrintArray(matrix1);                            //Отобразили 2 матрицы
-Console.WriteLine();
+int[,] matrix2 = GetArray(2, 3, 1, 10);  
+Console.WriteLine("Матрица А:");
+PrintArray(matrix1);                             //Отобразили 2 матрицы
+Console.WriteLine("Матрица B:");
 PrintArray(matrix2);
-Console.WriteLine();
+Console.WriteLine("Результирующая матрица:");
 int[,] matrix = MatrixMultiply(matrix1, matrix2); //Перемножили
 PrintArray(matrix);                             //Отобразили итог
 //---------------------------------------------------------------------
-Console.WriteLine("-----------------------\nЗадача №60\n");
+Console.WriteLine("-----------------------\nЗадача №60\nТрехмерные массивы\n");
 int[,,] arrayThird = GetThirdArray(4, 4, 4, 10, 100); //Трехмерный массив
 PrintArrayThird(arrayThird);                          //Отображение трехмерного массива
-Console.WriteLine("-----------------------\nЗадача №62\n");
+//---------------------------------------------------------------------
 
+Console.WriteLine("-----------------------\nЗадача №62\n" +
+                    "Почему бы не сделать 8 на 7:)\n" +
+                    "Да и стартовое число любое\n"); //Спиральный массив
+int[,] spiral = SpiralArray(8, 7, 10);
+PrintArray(spiral);
+Console.WriteLine();
