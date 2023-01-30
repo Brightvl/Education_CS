@@ -226,7 +226,7 @@ Console.WriteLine();
 //---------------------------------------------------------------------
 Console.WriteLine("-----------------------\nЗадача №58\n");
 int[,] matrix1 = GetArray(3, 2, 1, 10);         //Задали 2 матрицы
-int[,] matrix2 = GetArray(2, 3, 1, 10);  
+int[,] matrix2 = GetArray(2, 3, 1, 10);
 Console.WriteLine("Матрица А:");
 PrintArray(matrix1);                             //Отобразили 2 матрицы
 Console.WriteLine("Матрица B:");
